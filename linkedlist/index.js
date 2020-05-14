@@ -81,6 +81,27 @@ class LinkedList {
   }
 
 
+  insertLast(data){
+
+    // if(!this.head){
+    //   return;
+    // };
+    //
+    // const node = new Node(data)
+    // let lastNode = this.getLast();
+    // lastNode.next = node;
+
+    //alternate solution
+    const last = this.getLast();
+
+    if(last){
+      last.next = new Node(data);
+    } else {
+      new Node(data);
+    }
+  }
+
+
 }
 
 module.exports = { Node, LinkedList };
